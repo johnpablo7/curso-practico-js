@@ -1,31 +1,25 @@
-const body = document.querySelector('body');
-const val1 = document.querySelector('#val1');
-const val2 = document.querySelector('#val2');
-const calc = document.querySelector('#calculate');
-const sum = document.querySelector('#sum');
-const res = document.querySelector('#res');
-const mult = document.querySelector('#mult');
-const div = document.querySelector('#div');
+const h1 = document.querySelector('h1');
+const form = document.querySelector('form');
+const val1 = document.querySelector('#calculo1');
+const val2 = document.querySelector('#calculo2');
+const btn = document.querySelector('#btnCalcular');
+const result = document.querySelector('#result');
 
-const result = document.createElement('h2');
+form.addEventListener('submit', sumarInputValues);
 
-function calculate() {
-  let value1 = Number(val1.value);
-  let value2 = Number(val2.value);
-  let resValue = 0;
-
-  if (sum.checked) {
-    resValue = value1 + value2;
-  } else if (res.checked) {
-    resValue = value1 - value2;
-  } else if (mult.checked) {
-    resValue = value1 * value2;
-  } else {
-    resValue = value1 / value2;
-  }
-
-  resValue = `El resultado es: ${resValue}`;
-  result.innerHTML = resValue;
-  body.append(result);
+function sumarInputValues(event) {
+  // console.log({ event });
+  event.preventDefault();
+  const sumarInputs = val1.value + val2.value;
+  result.innerText = "Resultado: " + sumarInputs;
 }
+
+// form.addEventListener('mouseover', enviarFormulario);
+
+// function enviarFormulario(e) {
+//   // console.log({ event });
+//   e.preventDefault();
+
+//   alert("virus")
+// }
 
