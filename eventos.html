@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulación del DOM básica - Curso Práctico de Javascript</title>
+  </head>
+
+  <body>
+    <h1>Manipulación del DOM básica</h1>
+    <hr />
+
+    <input type="radio" id="sum" value="sum" name="operation" checked />
+    <label for="sum">Suma</label>
+    <br />
+
+    <input type="radio" id="res" value="res" name="operation" />
+    <label for="res">Resta</label>
+    <br />
+
+    <input type="radio" id="mult" value="mult" name="operation" />
+    <label for="mult">Multiplicación</label>
+    <br />
+
+    <input type="radio" id="div" value="div" name="operation" />
+    <label for="div">División</label>
+    <br />
+    <hr />
+    <input id="val1" placeholder="Escribe un numero" />
+    <input id="val2" placeholder="Escribe un numero" />
+    <br />
+
+    <br />
+    <button id="calculate" onclick="calculate()">Start</button>
+
+    <script src="./eventos.js"></script>
+  </body>
+</html>
